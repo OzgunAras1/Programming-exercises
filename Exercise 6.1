@@ -1,0 +1,20 @@
+package programmingexercisesmedhods;
+public class Exercise_6_1 {
+	
+	public static void main(String[] args) {
+		final int numberofpentagonals = 100;
+		final int numberperline = 10; 
+
+		System.out.println("Write 100 pentagonal numbers and ten per line: ");
+		for (int i = 1; i <= numberofpentagonals; i++) {
+			if (i % numberperline==0) 
+				System.out.printf("%10d\n", getPentagonalNumber(i));
+			else
+				System.out.printf("%10d", getPentagonalNumber(i));
+		}
+	}
+
+	public static int getPentagonalNumber(int n) {
+		return (n*(3*n-1))/2;
+	}
+}
