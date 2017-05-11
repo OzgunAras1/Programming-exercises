@@ -1,0 +1,24 @@
+package programmingexercisesmedhods;
+
+import java.util.Scanner;
+
+public class exercise_7_9 {
+    public static void main(String[] args) {
+	Scanner input = new Scanner(System.in); 
+	int[] nums = new int[10]; 
+
+	System.out.print("Enter ten numbers: ");
+	for (int i = 0; i < nums.length; i++) {
+            nums[i] = input.nextInt();
+	}
+	    System.out.println("The minimum number is: " + min(nums));
+    }
+	public static int  min(int[] array) {
+	    int min = array[0];
+	    for (int i: array) {
+		if (i < min)
+		min = i;
+	    }
+	     return min;
+	}
+}
